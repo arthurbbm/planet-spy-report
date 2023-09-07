@@ -1,8 +1,11 @@
 import pandas as pd
 import json
+import os
 
 # Load CSV into a DataFrame
-csv_file = 'C:\\Users\\Arthur Machado\\Documents\\Soybean Farming Systems\\PlanetPDFGenerator\\locations.csv'
+csv_file = ''
+GEOJSON_PATH = ''
+
 df = pd.read_csv(csv_file, dtype={"geojson": str})
 
 # If 'geojson' column doesn't exist, create it
@@ -10,7 +13,7 @@ if 'geojson' not in df.columns:
     df['geojson'] = None
 
 # Load the GeoJSON file into a dictionary
-with open('C:\\Users\\Arthur Machado\\Documents\\Soybean Farming Systems\\PlanetPDFGenerator\\map.geojson', 'r') as f:
+with open(GEOJSON_PATH, 'r') as f:
     geojson_data = json.load(f)
 
 # Iterate over the rows of the DataFrame

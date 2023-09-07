@@ -54,15 +54,3 @@ def generate_pdf(fields: list, output_file: str):
 
     story.append(table)
     doc.build(story)
-
-
-def test_generate_pdf():
-    import os
-    base_path = "C:\\Users\\Arthur Machado\\Pictures\\TCC Pictures"
-    image_pairs = [
-        Field("MO_1", "Central", "Alpers", 38.80536615, -92.58703598, 14, os.path.join(base_path, "band1.png"), os.path.join(base_path, "band2.png")),
-        Field("MO_1", "Central", "Alpers", 38.80536615, -92.58703598, 13, os.path.join(base_path, "band3.png"), os.path.join(base_path, "band4.png")),
-    ]
-
-    output_file = os.path.join(base_path, "farm_fields.pdf")
-    generate_pdf(image_pairs, output_file)
