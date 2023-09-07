@@ -1,3 +1,5 @@
 .env
 locations.csv
 map.geojson
+.idea/
+__pycache__/
