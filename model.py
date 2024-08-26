@@ -14,7 +14,7 @@ from datetime import date, datetime, timedelta
 from pyproj import Transformer
 
 
-DOWNLOAD_DIR = pathlib.Path(f"{os.getcwd()}\\{date.today().strftime('%Y-%m-%d')}")
+DOWNLOAD_DIR = pathlib.Path(f"{os.getcwd()}/volume/{date.today().strftime('%Y-%m-%d')}")
 B = 0
 G = 1
 R = 2
@@ -108,7 +108,7 @@ class Field:
             os.makedirs(directory)
 
     def __rename_field_dir(self, src_dir):
-        old_dir = os.path.join(src_dir, self.order_id + '/PSSCene')
+        old_dir = os.path.join(src_dir, self.order_id + '/PSScene')
         for file in os.listdir(old_dir):
             old_path = os.path.join(old_dir, file)
             ext = os.path.splitext(file)[-1]

@@ -3,8 +3,8 @@ import json
 import os
 
 # Load CSV into a DataFrame
-csv_file = ''
-GEOJSON_PATH = ''
+csv_file = '/home/planet-spy-report/volume/locations_without_geojson.csv'
+GEOJSON_PATH = '/home/planet-spy-report/volume/locations.geojson'
 
 df = pd.read_csv(csv_file, dtype={"geojson": str})
 

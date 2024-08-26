@@ -8,7 +8,7 @@ from model import Field, Raster, DOWNLOAD_DIR
 from pdf_generator import generate_pdf
 
 
-TABLE_FILE_PATH = "C:\\Users\\Arthur Machado\\Documents\\Soybean Farming Systems\\PlanetPDFGenerator\\locations.csv"
+TABLE_FILE_PATH = "/home/planet-spy-report/volume/locations.csv"
 PDF_PATH = os.path.join(DOWNLOAD_DIR, "report.pdf")
 
 
@@ -40,7 +40,7 @@ class RastersSet:
 
 
 class FieldsOrder:
-    MAX_WORKERS = 12
+    MAX_WORKERS = 30
 
     def __is_valid_filename(self, value):
         allowed_pattern = r'^[a-zA-Z][a-zA-Z0-9\s\-_]*$'

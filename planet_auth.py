@@ -1,8 +1,8 @@
 from planet import Auth
 from decouple import config
 
-API_USERNAME = config('USER')
-API_PASSWORD = config('PASSWORD')
+API_USERNAME = config('PLANET_USERNAME')
+API_PASSWORD = config('PLANET_PASSWORD')
 
 user = API_USERNAME
 pw = API_PASSWORD
